@@ -1172,6 +1172,7 @@
       ]
     },
     "optimization": {
+      "description": "Enables/Disables integrated optimizations",
       "type": "object",
       "additionalProperties": false,
       "properties": {
@@ -1214,6 +1215,19 @@
         "namedModules": {
           "description": "Use readable module identifiers for better debugging",
           "type": "boolean"
+        },
+        "nodeEnv": {
+          "description": "Set process.env.NODE_ENV to a specific value",
+          "anyOf": [
+            {
+              "enum": [
+                false
+              ]
+            },
+            {
+              "type": "string"
+            }
+          ]
         }
       }
     },

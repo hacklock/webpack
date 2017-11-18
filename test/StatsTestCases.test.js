@@ -19,6 +19,7 @@ describe("StatsTestCases", () => {
 		it("should print correct stats for " + testName, function(done) {
 			this.timeout(10000);
 			let options = {
+				mode: "development",
 				entry: "./index",
 				output: {
 					filename: "bundle.js"

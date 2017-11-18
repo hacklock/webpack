@@ -92,6 +92,7 @@ describe("WatchTestCases", () => {
 						if(fs.existsSync(configPath))
 							options = require(configPath);
 						const applyConfig = (options) => {
+							if(!options.mode) options.mode = "production";
 							if(!options.context) options.context = tempDirectory;
 							if(!options.entry) options.entry = "./index.js";
 							if(!options.target) options.target = "async-node";
