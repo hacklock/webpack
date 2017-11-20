@@ -19,6 +19,7 @@ module.exports = [{
 		})
 	]
 },{
+	mode: "production",
 	entry: {
 		app: "./entry-2.js"
 	},

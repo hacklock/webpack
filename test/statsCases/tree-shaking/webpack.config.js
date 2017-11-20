@@ -4,6 +4,9 @@ module.exports = {
 	output: {
 		filename: "bundle.js"
 	},
+	optimization: {
+		concatenateModules: false
+	},
 	stats: {
 		chunkModules: false,
 		modules: true,

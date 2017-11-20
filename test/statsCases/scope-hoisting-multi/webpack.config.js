@@ -11,6 +11,9 @@ module.exports = [
 		output: {
 			filename: "[name].js"
 		},
+		optimization: {
+			concatenateModules: false
+		},
 		plugins: [
 			new webpack.optimize.CommonsChunkPlugin({
 				name: "vendor",
@@ -36,8 +39,7 @@ module.exports = [
 			new webpack.optimize.CommonsChunkPlugin({
 				name: "vendor",
 				minChunks: Infinity
-			}),
-			new webpack.optimize.ModuleConcatenationPlugin()
+			})
 		],
 		stats: {
 			assets: false,
